@@ -1,0 +1,44 @@
+<h2 class="mb-4">Student List</h2>
+
+<a href="/students/add" class="btn btn-success mb-3">+ Add Student</a>
+<div class="mb-3">
+  <a href="/students/export/excel" class="btn btn-outline-success me-2">🔽 Export to Excel</a>
+  <a href="/students/export/pdf" class="btn btn-outline-danger">📄 Export to PDF</a>
+</div>
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>DOB</th>
+      <th>Gender</th>
+      <th>Guardian</th>
+      <th>Course</th>
+      {{#if user}}
+        <th>Actions</th>
+      {{/if}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each students}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.contact}}</td>
+      <td>{{this.address}}</td>
+      <td>{{formatDate this.dob}}</td>
+      <td>{{this.gender}}</td>
+      <td>{{this.guardianName}}</td>
+      <td>{{this.course.title}}</td>
+      {{#if ../user}}
+        <td>
+          <a href="/students/edit/{{this._id}}" class="btn btn-sm btn-warning">Edit</a>
+          <a href="/students/delete/{{this._id}}" class="btn btn-sm btn-danger">Delete</a>
+        </td>
+      {{/if}}
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+<div class="text-center p-5 bg-light rounded shadow">
+  <h1 class="display-4 mb-3">Welcome to the School Database</h1>
+  <p class="lead">Manage students, courses, and academic records with ease.</p>
+  <a href="/students" class="btn btn-primary btn-lg mt-3">View Students</a>
+  {{#unless user}}
+    <a
+      href="/register"
+      class="btn btn-outline-secondary btn-lg mt-3"
+    >Register</a>
+  {{/unless}}
+</div>

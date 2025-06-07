@@ -1,0 +1,31 @@
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<div class="card p-4 shadow-sm bg-light mb-5">
+  <h4 class="mb-3">Enrolled Students</h4>
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each students}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.course.title}}</td>
+          <td>{{this.marks}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<a href="/courses" class="btn btn-outline-primary">Manage Courses</a>
+<div class="mt-4">
+  <a href="/" class="btn btn-secondary me-2">🏠 Back to Homepage</a>
+  <a href="javascript:history.back()" class="btn btn-outline-dark">🔙 Back</a>
+</div>

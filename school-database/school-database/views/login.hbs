@@ -1,0 +1,38 @@
+<h2 class="mb-4">Login</h2>
+
+<!-- Show Flash Messages -->
+{{#if error_msg}}
+  <div class="alert alert-danger">{{error_msg}}</div>
+{{/if}}
+
+{{#if success_msg}}
+  <div class="alert alert-success">{{success_msg}}</div>
+{{/if}}
+
+<form action="/login" method="POST" class="card p-4 shadow-sm bg-light">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" name="email" id="email" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<div class="mt-3">
+  <a href="/auth/github" class="btn btn-dark">Login with GitHub</a>
+</div>
+<div class="mt-4">
+  <a href="/" class="btn btn-secondary me-2">🏠 Back to Homepage</a>
+  <a href="javascript:history.back()" class="btn btn-outline-dark">🔙 Back</a>
+</div>

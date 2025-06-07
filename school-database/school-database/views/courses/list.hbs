@@ -1,0 +1,24 @@
+<h2 class="mb-4">Available Courses</h2>
+
+<a href="/courses/add" class="btn btn-primary mb-3">+ Add Course</a>
+
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Title</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each courses}}
+      <tr>
+        <td>{{this.title}}</td>
+        <td>{{this.code}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<div class="mt-4">
+  <a href="/" class="btn btn-secondary me-2">🏠 Back to Homepage</a>
+  <a href="javascript:history.back()" class="btn btn-outline-dark">🔙 Back</a>
+</div>

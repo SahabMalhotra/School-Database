@@ -1,0 +1,19 @@
+<h2 class="mb-4">Add Course</h2>
+
+<form method="POST" action="/courses/add" class="card p-4 shadow-sm bg-light">
+  <div class="mb-3">
+    <label class="form-label">Course Title</label>
+    <input type="text" name="title" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Course Code</label>
+    <input type="text" name="code" class="form-control" required />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Course</button>
+</form>
+<div class="mt-4">
+  <a href="/" class="btn btn-secondary me-2">🏠 Back to Homepage</a>
+  <a href="javascript:history.back()" class="btn btn-outline-dark">🔙 Back</a>
+</div>
